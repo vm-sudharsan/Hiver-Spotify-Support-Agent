@@ -1,0 +1,59 @@
+{
+  "split_version": "spotify_group_split_v1",
+  "random_seed": 20260915,
+  "source_dataset": "data\\processed\\spotify_journeys.jsonl",
+  "development_dataset": "data\\processed\\spotify_development.jsonl",
+  "golden_candidate_dataset": "data\\processed\\spotify_golden_candidates.jsonl",
+  "total_journeys": 24568,
+  "development_count": 19654,
+  "golden_candidate_count": 4914,
+  "target_golden_candidate_count": 4914,
+  "observed_golden_candidate_ratio": 0.200016,
+  "grouping_method": "connected components of shared exact or normalized journey signature hashes",
+  "semantic_near_duplicate_detection": "not_implemented; no semantic similarity claim",
+  "grouping_statistics": {
+    "exact_duplicate_signature_families": 0,
+    "exact_duplicate_signature_journeys": 0,
+    "normalized_duplicate_signature_families": 0,
+    "normalized_duplicate_signature_journeys": 0,
+    "group_count": 24568,
+    "singleton_group_count": 24568,
+    "multi_member_group_count": 0,
+    "largest_group_size": 1
+  },
+  "duplicate_family_statistics": {
+    "exact_duplicate_signature_families": 0,
+    "exact_duplicate_signature_journeys": 0,
+    "normalized_duplicate_signature_families": 0,
+    "normalized_duplicate_signature_journeys": 0,
+    "group_count": 24568,
+    "singleton_group_count": 24568,
+    "multi_member_group_count": 0,
+    "largest_group_size": 1
+  },
+  "golden_candidate_heuristic_metadata_statistics": {
+    "multi_turn_journeys": 1202,
+    "single_or_short_journeys": 3712,
+    "reconstruction_status": {
+      "complete": 4696,
+      "partial": 218
+    },
+    "journeys_with_heuristic_flag": {
+      "failure_marker_flag": 513,
+      "question_marker_flag": 3939,
+      "diagnostic_context_marker_flag": 2249,
+      "dm_handoff_marker_flag": 2134,
+      "resolution_marker_flag": 203
+    }
+  },
+  "validation": {
+    "journey_id_disjoint": true,
+    "group_key_disjoint": true,
+    "counts_match_source": true,
+    "records_trace_to_source": true,
+    "message_provenance_preserved": true,
+    "deterministic_for_seed": true,
+    "golden_excluded_from_development": true,
+    "source_jsonl_sha256": "9092205e63a803bb3c0c96f65a55d2bf120d51a9787f4f84575845efee03e189"
+  }
+}

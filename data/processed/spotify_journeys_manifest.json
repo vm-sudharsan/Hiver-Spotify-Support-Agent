@@ -1,0 +1,27 @@
+{
+  "input_dataset": "D:\\Hiver\\data\\raw\\archive\\twcs.csv",
+  "output_dataset": "D:\\Hiver\\data\\processed\\spotify_journeys.jsonl",
+  "brand_filter": "SpotifyCares",
+  "root_definition": "inbound root with empty in-file parent and response_tweet_id targeting outbound SpotifyCares support",
+  "descendant_definition": "follow in_response_to_tweet_id children through depth 100",
+  "max_depth": 100,
+  "standard_library_hash": "sha256",
+  "semantic_near_duplicate_detection": "not_implemented; exact and normalized deterministic hashes only",
+  "statistics": {
+    "journey_count": 24568,
+    "complete_journeys": 23466,
+    "partial_journeys": 1102,
+    "uncertain_journeys": 0,
+    "message_count": 72030,
+    "customer_turn_count": 37305,
+    "support_turn_count": 34725,
+    "multi_turn_journeys": 6166,
+    "read_back_journeys": 24568,
+    "input_rows": 2811774,
+    "input_customer_rows": 1537843,
+    "input_support_rows": 1273931,
+    "invalid_created_at_rows": 0
+  },
+  "ingest_seconds": 76.57,
+  "total_runtime_seconds": 100.114
+}
