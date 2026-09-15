@@ -1,0 +1,158 @@
+{
+  "sampling_version": "spotify_golden_annotation_sampling_v1",
+  "source_file": "data\\processed\\spotify_golden_candidates.jsonl",
+  "development_file": "data\\processed\\spotify_development.jsonl",
+  "output_file": "data\\processed\\golden_annotation_candidates.jsonl",
+  "candidate_pool_size": 4914,
+  "selected_candidate_count": 240,
+  "unused_candidate_count": 4674,
+  "random_seed": 20260916,
+  "sampling_dimensions": [
+    "length_bucket: message_count <=2, 3-4, 5-8, >=9",
+    "reconstruction_status",
+    "failure_marker_flag",
+    "dm_handoff_marker_flag",
+    "resolution_marker_flag",
+    "diagnostic_context_marker_flag",
+    "question_marker_flag",
+    "lexical token novelty tie-breaker"
+  ],
+  "target_counts_per_stratum": {
+    "length_bucket": {
+      "single_turn": 72,
+      "short_multi_turn": 60,
+      "medium_multi_turn": 60,
+      "long_multi_turn": 48
+    },
+    "reconstruction_status": {
+      "complete": 210,
+      "partial": 30
+    },
+    "failure_marker": {
+      "true": 50
+    },
+    "dm_handoff_marker": {
+      "true": 60
+    },
+    "resolution_marker": {
+      "true": 30
+    },
+    "diagnostic_context_marker": {
+      "true": 60
+    },
+    "question_marker": {
+      "true": 190
+    }
+  },
+  "actual_counts_per_stratum": {
+    "length_bucket": {
+      "long_multi_turn": 48,
+      "medium_multi_turn": 60,
+      "short_multi_turn": 60,
+      "single_turn": 72
+    },
+    "reconstruction_status": {
+      "complete": 210,
+      "partial": 30
+    },
+    "failure_marker": {
+      "False": 179,
+      "True": 61
+    },
+    "dm_handoff_marker": {
+      "False": 146,
+      "True": 94
+    },
+    "resolution_marker": {
+      "False": 205,
+      "True": 35
+    },
+    "diagnostic_context_marker": {
+      "False": 125,
+      "True": 115
+    },
+    "question_marker": {
+      "False": 28,
+      "True": 212
+    }
+  },
+  "available_source_counts_per_stratum": {
+    "length_bucket": {
+      "single_turn": 3533,
+      "short_multi_turn": 810,
+      "medium_multi_turn": 444,
+      "long_multi_turn": 127
+    },
+    "reconstruction_status": {
+      "complete": 4696,
+      "partial": 218
+    },
+    "failure_marker": {
+      "False": 4401,
+      "True": 513
+    },
+    "dm_handoff_marker": {
+      "True": 2134,
+      "False": 2780
+    },
+    "resolution_marker": {
+      "False": 4711,
+      "True": 203
+    },
+    "diagnostic_context_marker": {
+      "False": 2665,
+      "True": 2249
+    },
+    "question_marker": {
+      "True": 3939,
+      "False": 975
+    }
+  },
+  "selection_methodology": "fixed length quotas, deterministic greedy coverage of secondary observable targets, and inverse-frequency lexical novelty tie-breaking; no labels inferred",
+  "heuristic_metadata_is_ground_truth": false,
+  "monitoring_improvement_metadata_available": false,
+  "source_jsonl_sha256": "d6b85f3dd1df61c756f239a44028f987fb3fc366a38c348719ca583b95decfae",
+  "validation": {
+    "selected_in_reserved_pool": true,
+    "excluded_from_development": true,
+    "journey_ids_unique": true,
+    "root_tweet_ids_unique": true,
+    "content_and_provenance_preserved": true,
+    "valid_jsonl": true,
+    "deterministic_for_seed": true,
+    "actual_stratum_counts": {
+      "length_bucket": {
+        "long_multi_turn": 48,
+        "medium_multi_turn": 60,
+        "short_multi_turn": 60,
+        "single_turn": 72
+      },
+      "reconstruction_status": {
+        "complete": 210,
+        "partial": 30
+      },
+      "failure_marker": {
+        "False": 179,
+        "True": 61
+      },
+      "dm_handoff_marker": {
+        "False": 146,
+        "True": 94
+      },
+      "resolution_marker": {
+        "False": 205,
+        "True": 35
+      },
+      "diagnostic_context_marker": {
+        "False": 125,
+        "True": 115
+      },
+      "question_marker": {
+        "False": 28,
+        "True": 212
+      }
+    },
+    "stratum_counts_match_manifest": true,
+    "selected_count": 240
+  }
+}
