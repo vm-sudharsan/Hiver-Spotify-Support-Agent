@@ -17,7 +17,7 @@ class IntentPrediction:
 
 
 _RULES: dict[str, tuple[tuple[str, float], ...]] = {
-    INTENTS[0]: (("playback", 3), ("skip", 3), ("skipping", 3), ("stutter", 3), ("pause", 2), ("buffer", 2), ("won't play", 3), ("not playing", 3)),
+    INTENTS[0]: (("playback", 3), ("skip", 3), ("skips", 3), ("skipping", 3), ("stutter", 3), ("pause", 2), ("buffer", 2), ("won't play", 3), ("not playing", 3)),
     INTENTS[1]: (("app", 2), ("browser", 2), ("crash", 3), ("battery", 3), ("ios", 2), ("android", 2), ("device", 1), ("platform", 2)),
     INTENTS[2]: (("artist", 2), ("album", 2), ("song", 2), ("track", 2), ("unavailable", 3), ("greyed", 3), ("catalog", 3), ("removed", 2)),
     INTENTS[3]: (("playlist", 3), ("library", 3), ("shuffle", 2), ("repeat", 2), ("organize", 2), ("local file", 2), ("save", 1)),
